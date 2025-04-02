@@ -8,7 +8,7 @@ export class CepController {
   constructor(private readonly cepService: CepServiceImpl) {}
 
   @Post()
-  async getCep(@Body() request: CepRequestDto): Promise<CepResponseDto> {
-    return this.cepService.getCep(request.cep);
+  async getCep(@Body() cepRequestDto: CepRequestDto): Promise<CepResponseDto> {
+    return this.cepService.getCep(cepRequestDto.cep);
   }
 }
